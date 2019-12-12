@@ -24,7 +24,12 @@ class StoreHomePage extends StatelessWidget {
   {
     return Scaffold(
       backgroundColor: Colors.lightBlue,
-      appBar: AppBar(title: Text(title),)
+      appBar: AppBar(title: Text(title),),
+      body: Column(children: <Widget>[
+        
+      ],),
+
+
     );
   }
 }
