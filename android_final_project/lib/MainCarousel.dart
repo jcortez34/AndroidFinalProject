@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:android_final_project/MenuCard.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 class CafeCarouselPage extends StatefulWidget 
 {
@@ -33,5 +35,33 @@ with SingleTicketProviderStateMixin{
     _tabController.animateTo(
       newTabIndex,
     );
+    
+    Widget build(BuildContext context)
+    {
+       return SizedBox(
+          height: 250.0,
+         width: double.infinity,
+         child: DecoratedBox(
+        decoration: BoxDecoration(
+          border: Border.all(
+            width: 4.0,
+            color: Colors.black,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Stack(
+            children: <Widget>[
+            ScopedModelDescendant<MyModel>(
+            rebuildOnChange: false,
+            builder: (context, _, model) {
 
+            }
+            ],
+          ),
+        ),
+        ),
+       );
+    }
+  }
 }
