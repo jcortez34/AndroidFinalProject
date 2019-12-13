@@ -1,5 +1,7 @@
 import 'package:scoped_model/scoped_model.dart';
 import 'package:flutter/material.dart';
+import 'package:android'
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -22,14 +24,15 @@ class StoreHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context)
   {
-    return Scaffold(
+    return ScopedModel<MyModel>(
+      model:MyModel(),
+      child: Scaffold(
       backgroundColor: Colors.lightBlue,
       appBar: AppBar(title: Text(title),),
       body: Column(children: <Widget>[
-        
+            MainCarouselPage(),
       ],),
-
-
+    ),
     );
   }
 }
