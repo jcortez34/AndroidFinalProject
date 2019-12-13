@@ -1,6 +1,7 @@
 import 'package:scoped_model/scoped_model.dart';
 import 'package:flutter/material.dart';
-import 'package:android'
+import 'package:android_final_project/MenuCard.dart';
+import 'package:android_final_project/MainCarousel.dart';
 
 
 class MyApp extends StatelessWidget {

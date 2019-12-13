@@ -55,8 +55,22 @@ with SingleTicketProviderStateMixin{
             ScopedModelDescendant<MyModel>(
             rebuildOnChange: false,
             builder: (context, _, model) {
-
-            }
+                return TabBarView(
+                controller: _tabController,
+                children: mainTypes.map((menuItem) {
+                  return GestureDetector(
+                    onTap: () {
+                      var type;                     
+                      model.updateMenuList(type);
+                    },
+                    child: MenuCard(
+                        chosenItem: menuItem, 
+                    )
+                  );
+                }).toList(),
+                );
+            },
+            )
             ],
           ),
         ),
