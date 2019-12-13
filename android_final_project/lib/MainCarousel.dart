@@ -35,7 +35,9 @@ with TickerProviderStateMixin{
     _tabController.animateTo(
       newTabIndex,
     );
+    }
     
+    @override 
     Widget build(BuildContext context)
     {
        return SizedBox(
@@ -114,9 +116,9 @@ with TickerProviderStateMixin{
         ),
        );
     }
-  }
+  
 
-  noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
+
 }
 
 void main()
