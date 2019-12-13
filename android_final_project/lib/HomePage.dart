@@ -31,7 +31,7 @@ class StoreHomePage extends StatelessWidget {
       backgroundColor: Colors.lightBlue,
       appBar: AppBar(title: Text(title),),
       body: Column(children: <Widget>[
-            MainCarouselPage(),
+            CafeCarouselPage(),
       ],),
     ),
     );
