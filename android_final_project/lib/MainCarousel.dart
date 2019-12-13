@@ -116,11 +116,7 @@ with TickerProviderStateMixin{
     }
   }
 
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return null;
-  }
+  noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
 void main()
