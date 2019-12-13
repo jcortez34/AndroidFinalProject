@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:android_final_project/MenuCard.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class CafeCarouselPage extends StatefulWidget 
@@ -11,12 +10,12 @@ class CafeCarouselPage extends StatefulWidget
 }
 
 class _CafeCarouselPageState extends State<CafeCarouselPage>
-with SingleTicketProviderStateMixin{
+with TickerProviderStateMixin{
     int choice= 0;
     TabController _tabController;
     void initState(){
       super.initState();
-      _tabController = TabController(length: mainTypes.length, vsync: this)
+      _tabController = TabController(length: mainTypes.length, vsync: this);
     }
 
     void dispose() {
@@ -115,6 +114,12 @@ with SingleTicketProviderStateMixin{
         ),
        );
     }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return null;
   }
 }
 
