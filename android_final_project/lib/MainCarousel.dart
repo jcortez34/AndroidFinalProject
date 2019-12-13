@@ -70,7 +70,44 @@ with SingleTicketProviderStateMixin{
                 }).toList(),
                 );
             },
-            )
+            ),
+             Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TabPageSelector(
+                    controller: _tabController,
+                    color: Colors.white,
+                    indicatorSize: 20,
+                  ),
+                ),
+              ),
+             Align(
+                alignment: Alignment.centerLeft,
+                child: IconButton(
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: Colors.blue,
+                    size: 36,
+                  ),
+                  onPressed: () {
+                    _changeImage(delta: -1);
+                  },
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: IconButton(
+                  icon: Icon(
+                    Icons.arrow_forward,
+                    color: Colors.blue,
+                    size: 36,
+                  ),
+                  onPressed: () {
+                    _changeImage(delta: 1);
+                  },
+                ),
+              ), 
             ],
           ),
         ),
@@ -78,4 +115,9 @@ with SingleTicketProviderStateMixin{
        );
     }
   }
+}
+
+void main()
+{
+  runApp(CafeCarouselPage());
 }
