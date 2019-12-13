@@ -8,6 +8,31 @@ List<MenuItem> mainTypes = <MenuItem>[
   MenuItem('Desserts', 'assets/img/desserts.jpg'),
 ];
 
+
+List<MenuItem> drinksMenu = <MenuItem>[
+  MenuItem('Black Coffee', 'assets/img/black-coffee.jpeg'),
+  MenuItem('Cappuccino', 'assets/img/cappuccino.jpeg'),
+  MenuItem('Espresso', 'assets/img/espresso.jpeg'),
+  MenuItem('Latte', 'assets/img/latte.jpeg'),
+  MenuItem('Black Tea', 'assets/img/black-tea.jpeg'),
+  MenuItem('Brown Tea', 'assets/img/brown-tea.jpeg'),
+  MenuItem('English Tea', 'assets/img/english-tea.jpeg'),
+  MenuItem('Herbal Tea', 'assets/img/herbal-tea.jpeg'),
+  MenuItem('Mint Tea', 'assets/img/mint-tea.jpeg'),
+];
+
+List<MenuItem> foodMenu = <MenuItem>[
+MenuItem('Brie Burger', 'assets/img/brie-burger.jpeg'),
+MenuItem('Cobb Sandwich', 'assets/img/cobb-sandwich.jpg'),
+MenuItem('Grilled Cheese', 'assets/img/grilled-cheese.jpg'),
+MenuItem('Hot Dog', 'assets/img/hotdog.jpg'),
+];
+
+List<MenuItem> dessertsMenu = <MenuItem>[
+MenuItem('Apple Pie', 'assets/img/apple-pie.jpg'),
+MenuItem('Choco Cake', 'assets/img/chocolate-cake.jpg'),
+MenuItem('Sundae', 'assets/img/sundae.jpg'),
+];
 class MyModel extends Model
 {
   List<MenuItem> _chosenItem = mainTypes;
@@ -19,6 +44,7 @@ class MyModel extends Model
     notifyListeners();
   }
 }
+
 
 class MenuCard extends StatelessWidget {
 

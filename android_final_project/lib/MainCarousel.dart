@@ -62,7 +62,22 @@ with TickerProviderStateMixin{
                 children: mainTypes.map((menuItem) {
                   return GestureDetector(
                     onTap: () {
-                      var type;                     
+                      var type;
+                      switch(menuItem.title) 
+                      {
+                          case 'Drinks':
+                            type = drinksMenu;
+                            break;
+                          case 'Food':
+                            type = foodMenu;
+                            break;
+                          case 'Desserts':
+                            type = dessertsMenu;
+                            break;
+                          default:
+                            throw '${menuItem.title} type not recognized';
+                        
+                      }                    
                       model.updateMenuList(type);
                     },
                     child: MenuCard(

@@ -2,6 +2,7 @@ import 'package:scoped_model/scoped_model.dart';
 import 'package:flutter/material.dart';
 import 'package:android_final_project/MenuCard.dart';
 import 'package:android_final_project/MainCarousel.dart';
+import 'package:android_final_project/MenuList.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -32,6 +33,7 @@ class StoreHomePage extends StatelessWidget {
       appBar: AppBar(title: Text(title),),
       body: Column(children: <Widget>[
             CafeCarouselPage(),
+            MenuList(),
       ],),
     ),
     );
